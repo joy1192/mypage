@@ -1,0 +1,14 @@
+version: "3"
+services:
+    workspace:
+      build: workspace
+      command: sleep infinity
+      ports:
+          - 3000:3000
+      volumes:
+          - ../:/workspaces/mypage
+# Windows環境でVolumeに切り離しておかないとビルドが1/10レベルで遅くなるので外出し
+volumes:
+    node_modules:
+        external:
+            false
