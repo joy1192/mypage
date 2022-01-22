@@ -3,8 +3,6 @@ services:
     workspace:
       build: workspace
       command: sleep infinity
-      ports:
-          - 3000:3000
       volumes:
           - node_modules:/workspaces/mypage/node_modules
           - ../:/workspaces/mypage
